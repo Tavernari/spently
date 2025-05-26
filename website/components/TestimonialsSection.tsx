@@ -28,19 +28,19 @@ const Testimonial: React.FC<TestimonialProps> = ({ quote, author, role, imageUrl
 const TestimonialsSection: React.FC = () => {
   const testimonials: TestimonialProps[] = [
     {
-      quote: `${APP_NAME} transformou completamente como eu gerencio minhas finanças. É simples, intuitivo e me ajudou a economizar mais de R$500 por mês!`,
+      quote: `${APP_NAME} completely transformed how I manage my finances. It's simple, intuitive, and helped me save over $500 per month!`,
       author: "Ana Silva",
-      role: "Profissional de Marketing",
+      role: "Marketing Professional",
     },
     {
-      quote: `Depois de tentar vários aplicativos de finanças, finalmente encontrei o ${APP_NAME}. É minimalista e eficaz - exatamente o que eu precisava.`,
+      quote: `After trying several finance apps, I finally found ${APP_NAME}. It's minimalist and effective - exactly what I needed.`,
       author: "Carlos Mendes",
-      role: "Desenvolvedor de Software",
+      role: "Software Developer",
     },
     {
-      quote: `Como freelancer, controlar despesas sempre foi um desafio. O ${APP_NAME} simplificou tudo e agora tenho uma visão clara das minhas finanças.`,
+      quote: `As a freelancer, tracking expenses was always a challenge. ${APP_NAME} simplified everything and now I have a clear view of my finances.`,
       author: "Juliana Costa",
-      role: "Designer Freelancer",
+      role: "Freelance Designer",
     },
   ];
 
@@ -48,7 +48,7 @@ const TestimonialsSection: React.FC = () => {
     <section className="py-16 bg-neutral-lightest">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          O que nossos usuários dizem
+          What Our Users Say
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
