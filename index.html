@@ -1,52 +1,282 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spently - Minimalist Expense Tracker</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spently - Master Your Spending, Effortlessly</title>
+    <meta name="description" content="Spently helps you control your finances the minimalist way. Focus on your spending target, not tedious categories, with simple, AI-powered expense tracking.">
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind config -->
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            colors: {
-              primary: {
-                DEFAULT: '#0D9488', // Teal-600
-                light: '#2DD4BF',   // Teal-400
-                dark: '#0F766E',    // Teal-700
-              },
-              neutral: {
-                light: '#F8FAFC', // Slate-50
-                DEFAULT: '#F1F5F9', // Slate-100
-                dark: '#64748B',   // Slate-500
-                darker: '#334155', // Slate-700
-              }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#3B82F6',
+                            light: '#DBEAFE',
+                            dark: '#1D4ED8'
+                        },
+                        neutral: {
+                            DEFAULT: '#F9FAFB',
+                            light: '#F3F4F6',
+                            lightest: '#F9FAFB',
+                            dark: '#6B7280',
+                            darker: '#1F2937'
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     </script>
-
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.1.0",
-    "react/": "https://esm.sh/react@^19.1.0/",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
-  }
-}
-</script>
-  <script type="module" crossorigin src="/assets/index-Cecwx-c1.js"></script>
+    
+    <style>
+        .hero-icon {
+            width: 2rem;
+            height: 2rem;
+        }
+        
+        .feature-icon {
+            width: 1.75rem;
+            height: 1.75rem;
+        }
+        
+        .check-icon {
+            width: 1.75rem;
+            height: 1.75rem;
+        }
+    </style>
 </head>
-  <body class="bg-neutral-light font-sans">
-    <div id="root"></div>
-  </body>
+<body class="min-h-screen flex flex-col text-neutral-darker">
+    <!-- Header -->
+    <header class="bg-neutral-light shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                Spently
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="bg-neutral-DEFAULT py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-neutral-darker mb-6">
+                    Master Your Spending, <span class="text-primary">Effortlessly</span>.
+                </h2>
+                <p class="text-lg md:text-xl text-neutral-dark max-w-3xl mx-auto mb-10">
+                    Spently helps you control your finances the minimalist way. Focus on your spending target, not tedious categories, with simple, AI-powered expense tracking.
+                </p>
+                <a href="https://t.me/spently_bot" target="_blank" rel="noopener noreferrer" 
+                   class="font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-75 transition-colors duration-300 ease-in-out bg-neutral-darker text-white hover:bg-primary-dark focus:ring-primary px-8 py-4 text-xl">
+                    Try Spently on Telegram
+                </a>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-neutral-darker mb-4">
+                        Embrace <span class="text-primary">Minimalist</span> Expense Management
+                    </h3>
+                    <p class="text-lg text-neutral-dark max-w-2xl mx-auto">
+                        Tired of complex budgets and endless category tracking? Spently offers a refreshingly simple approach to financial control.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <img src="https://picsum.photos/600/400?grayscale&image=1062" 
+                             alt="Minimalist workspace" 
+                             class="rounded-lg shadow-xl">
+                    </div>
+                    <div class="space-y-6 text-neutral-dark text-lg">
+                        <p>
+                            Imagine setting a simple monthly spending goal – say, $1000 for your variable expenses. Spently doesn't care how much you earn or what you spend on groceries versus entertainment. Its sole focus is to help you stay within that target.
+                        </p>
+                        <p>
+                            Inspired by the principle that <strong class="text-primary-dark">less is more</strong>, we help you gain daily awareness. Know instantly if you're on track, or if today's spending might compromise your goals for the rest of the month.
+                        </p>
+                        <p>
+                            This isn't about restrictive budgeting; it's about <strong class="text-primary-dark">conscious spending</strong> and achieving financial peace of mind by controlling your outflow, not meticulously cataloging every cent.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 md:py-24 bg-neutral-DEFAULT">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-neutral-darker mb-4">
+                        Smart Tracking, <span class="text-primary">Simpler Than Ever</span>
+                    </h3>
+                    <p class="text-lg text-neutral-dark max-w-2xl mx-auto">
+                        Spently leverages AI to make expense tracking intuitive and almost invisible.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1: AI-Powered Input -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center md:items-start md:text-left">
+                        <div class="bg-primary-light text-primary p-3 rounded-full mb-4 inline-block">
+                            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold text-neutral-darker mb-2">AI-Powered Input</h4>
+                        <p class="text-neutral-dark leading-relaxed">Log expenses effortlessly. Send a text, snap a photo of a receipt, or simply tell Spently via voice. Our AI understands and records it for you.</p>
+                    </div>
+
+                    <!-- Feature 2: Focus on Your Target -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center md:items-start md:text-left">
+                        <div class="bg-primary-light text-primary p-3 rounded-full mb-4 inline-block">
+                            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold text-neutral-darker mb-2">Focus on Your Target</h4>
+                        <p class="text-neutral-dark leading-relaxed">Set your spending goal. Spently shows your daily spending allowance and tracks your progress, keeping you informed and in control.</p>
+                    </div>
+
+                    <!-- Feature 3: Telegram Native -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center md:items-start md:text-left">
+                        <div class="bg-primary-light text-primary p-3 rounded-full mb-4 inline-block">
+                            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold text-neutral-darker mb-2">Telegram Native</h4>
+                        <p class="text-neutral-dark leading-relaxed">Manage everything directly within Telegram, an app you already use. No new apps to download, no complex setups.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Spently Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-neutral-darker mb-6">
+                            Your Path to <span class="text-primary">Financial Clarity</span>
+                        </h3>
+                        <p class="text-lg text-neutral-dark mb-8">
+                            Spently is more than just an expense tracker; it's a tool to empower your financial well-being with simplicity and intelligence.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-3">
+                                <svg class="check-icon text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"></path>
+                                </svg>
+                                <div>
+                                    <h5 class="text-xl font-semibold text-neutral-darker mb-1">Daily Spending Awareness</h5>
+                                    <p class="text-neutral-dark">Instantly know how much you can spend each day to stay on track with your monthly goals.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <svg class="check-icon text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"></path>
+                                </svg>
+                                <div>
+                                    <h5 class="text-xl font-semibold text-neutral-darker mb-1">Control Variable Expenses</h5>
+                                    <p class="text-neutral-dark">Effortlessly manage your discretionary spending without the hassle of micro-categorization.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <svg class="check-icon text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"></path>
+                                </svg>
+                                <div>
+                                    <h5 class="text-xl font-semibold text-neutral-darker mb-1">Achieve Your Financial Goals</h5>
+                                    <p class="text-neutral-dark">By maintaining focus on your overall spending limit, you're better equipped to save and reach your targets.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <svg class="check-icon text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"></path>
+                                </svg>
+                                <div>
+                                    <h5 class="text-xl font-semibold text-neutral-darker mb-1">Minimal Effort, Maximum Impact</h5>
+                                    <p class="text-neutral-dark">Simplify your financial life. Let our AI and minimalist approach do the heavy lifting.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://picsum.photos/500/500?image=1074" 
+                             alt="Person feeling financially clear" 
+                             class="rounded-lg shadow-xl max-w-md w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-16 bg-neutral-lightest">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                    What Our Users Say
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <p class="text-gray-700 italic mb-4 text-center">"Spently completely transformed how I manage my finances. It's simple, intuitive, and helped me save over $500 per month!"</p>
+                        <div class="text-center">
+                            <p class="font-semibold text-primary">Ana Silva</p>
+                            <p class="text-sm text-gray-500">Marketing Professional</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <p class="text-gray-700 italic mb-4 text-center">"After trying several finance apps, I finally found Spently. It's minimalist and effective - exactly what I needed."</p>
+                        <div class="text-center">
+                            <p class="font-semibold text-primary">Carlos Mendes</p>
+                            <p class="text-sm text-gray-500">Software Developer</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <p class="text-gray-700 italic mb-4 text-center">"As a freelancer, tracking expenses was always a challenge. Spently simplified everything and now I have a clear view of my finances."</p>
+                        <div class="text-center">
+                            <p class="font-semibold text-primary">Juliana Costa</p>
+                            <p class="text-sm text-gray-500">Freelance Designer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-primary py-16 md:py-24 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl md:text-4xl font-bold mb-6">
+                    Ready to Simplify Your Finances?
+                </h3>
+                <p class="text-lg md:text-xl max-w-xl mx-auto mb-10 text-primary-light">
+                    Take control of your spending the minimalist way. Get started with Spently on Telegram today – it's free!
+                </p>
+                <a href="https://t.me/spently_bot" target="_blank" rel="noopener noreferrer"
+                   class="font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-75 transition-colors duration-300 ease-in-out bg-white text-primary hover:bg-neutral-light focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-primary px-8 py-4 text-xl">
+                    Start Tracking with Spently
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-darker text-neutral-DEFAULT py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="current-year">2025</span> Spently. All rights reserved.</p>
+            <p class="text-sm text-neutral-dark mt-1">A minimalist approach to financial freedom.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
 </html>
-<link rel="stylesheet" href="index.css">
