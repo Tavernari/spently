@@ -15,10 +15,8 @@ const CTASection: React.FC = () => {
         <CallToActionButton 
             href={TELEGRAM_BOT_LINK} 
             size="large" 
-            // Removed variant="secondary" as we are fully overriding color styles with className.
-            // The className below provides specific styling for a white button with primary text,
-            // suitable for the primary-colored background of this section.
-            className="bg-white text-primary hover:bg-neutral-light focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-primary"
+            variant="primary"
+            className="bg-white text-primary hover:bg-neutral-light focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-primary !text-primary"
         >
           Start Tracking with {APP_NAME}
         </CallToActionButton>
