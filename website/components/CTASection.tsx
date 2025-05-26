@@ -1,10 +1,13 @@
 import React from 'react';
 import CallToActionButton from './CallToActionButton';
+import TestimonialsSection from './TestimonialsSection';
 import { TELEGRAM_BOT_LINK, APP_NAME } from '../constants';
 
 const CTASection: React.FC = () => {
   return (
-    <section className="bg-primary py-16 md:py-24 text-white">
+    <>
+      <TestimonialsSection />
+      <section className="bg-primary py-16 md:py-24 text-white">
       <div className="container mx-auto px-6 text-center">
         <h3 className="text-3xl md:text-4xl font-bold mb-6">
           Ready to Simplify Your Finances?
@@ -22,6 +25,7 @@ const CTASection: React.FC = () => {
         </CallToActionButton>
       </div>
     </section>
+    </>
   );
 };
 
