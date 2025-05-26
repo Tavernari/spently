@@ -1,22 +1,17 @@
 
 import React from 'react';
 import { APP_NAME } from '../constants';
+import { HiCheckCircle } from 'react-icons/hi2';
 
 interface BenefitPointProps {
   title: string;
   children: React.ReactNode;
 }
 
-const CheckCircleIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) => (
- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
-
 
 const BenefitPoint: React.FC<BenefitPointProps> = ({ title, children }) => (
   <div className="flex items-start space-x-3">
-    <CheckCircleIcon className="w-7 h-7 text-primary flex-shrink-0 mt-1" />
+    <HiCheckCircle className="w-7 h-7 text-primary flex-shrink-0 mt-1" />
     <div>
       <h5 className="text-xl font-semibold text-neutral-darker mb-1">{title}</h5>
       <p className="text-neutral-dark">{children}</p>
